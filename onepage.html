@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+  <title>iCafe</title>
+	<link rel="icon" type="image/x-icon" href="image/logo.png">
+	<link rel="shortcut icon" type="image/x-icon" href="image/logo.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
+	</script>
+ 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+	  
+
+
+	  .sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+	  .sticky + #contain {
+		  padding-top: 102px;}
+	  *{
+		  box-sizing: border-box;
+	  }
+	  #carousel-example-generic{
+		  margin-top: 50px;
+	  }
+  body {
+	  margin: 0;
+	  box-sizing: border-box;
+	  
+	 background-color:#333 ;
+  }
+	 
+	  }
+	  .text{
+		  color:#777777;
+		  font-size:100%;
+		  line-height: 30px;
+	  }
+	 
+	  .panel{
+		  transition: all 0.5s;
+	  }
+	  .panel:hover{
+		  box-shadow: 1px 1px 2px 0px #00bcd4;
+	  }
+#h2{
+	color: aliceblue;
+ }
+#navbar {
+	overflow: hidden;
+	background-color: #333;
+	z-index: 10;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+	border: solid,#1B1815;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+	  #imco{
+		   animation: shake 1.7s;
+  		   animation-iteration-count: infinite;
+		  height:280px ;}
+	#imco2{
+		   animation: shake 1.7s;
+  		   animation-iteration-count: infinite;
+		  height:280px ;
+	  }
+	  #imco3{
+		   animation: shake 1.7s;
+  		   animation-iteration-count: infinite;
+		  height:280px ;
+	  }
+	  @media screen and (max-width: 650px) {
+  .col {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .vl {
+    display: none;
+  }
+  
+  .hide-md-lg {
+    display: block;
+    text-align: center;
+  }
+}
+	  #container {
+  position: relative;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px 0 30px 0;
+} 
+
+/* style inputs and link buttons */
+input,
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  margin: 5px 0;
+  opacity: 0.85;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none; //
+}
+
+input:hover,
+.btn:hover {
+  opacity: 1;
+}
+
+.fb {
+  background-color: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background-color: #55ACEE;
+  color: white;
+}
+
+.google {
+  background-color: #dd4b39;
+  color: white;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.col {
+  float: left;
+  width: 50%;
+  margin: auto;
+  padding: 0 50px;
+  margin-top: 6px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.vl {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  border: 2px solid #ddd;
+  height: 175px;
+}
+
+/* text inside the vertical line */
+.vl-innertext {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 8px 10px;
+}
+
+/* hide some text on medium and large screens */
+.hide-md-lg {
+  display: none;
+}
+
+/* bottom container */
+.bottom-container {
+  text-align: center;
+  background-color: #666;
+  border-radius: 0px 0px 4px 4px;
+}
+	  
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+	  .text3{
+		   color: #D18027;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+	
+		 
+  display: flex;
+	  }
+
+#about{
+	color: #fff;}
+	  #wel
+	  {    position: absolute;
+           color: #ffff;
+           margin: 13% 10%;
+           font-family: "dancing-script";
+           font-size: 7vw;
+           border: 3px solid #ffff;
+           border-radius: 12px;
+		  
+	  }
+	  #con{height: }
+  #section1 {padding-top:50px;background-color: #1C1B1A}
+  #section2 {padding-top:50px;height:700px;color: aliceblue;background-color: #1C1B1A;}
+  #section3 {background-color: #1C1B1A;}
+   #section5 {padding-top:50px;height:auto;color: aliceblue;background-color: #1C1B1A;}
+  #section6 {padding-top:50px;height:500px;color: aliceblue;background-color: #1C1B1A;}
+	  #section5 {padding-top:50px;height:auto;color: aliceblue;background-color: #1C1B1A;}
+  .chefs .member {
+  text-align: center;
+  margin-bottom: 20px;
+  background: #343a40;
+  position: relative;
+  overflow: hidden;
+}
+.chefs .member .member-info {
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: 0.2s;
+}
+.chefs .member .member-info-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  transition: bottom 0.4s;
+}
+.chefs .member .member-info-content h4 {
+  font-weight: 700;
+  margin-bottom: 2px;
+  font-size: 18px;
+  color: #fff;
+}
+.chefs .member .member-info-content span {
+  font-style: italic;
+  display: block;
+  font-size: 13px;
+  color: #fff;
+}
+.chefs .member .social {
+  position: absolute;
+  left: 0;
+  bottom: -38px;
+  right: 0;
+  height: 48px;
+  transition: bottom ease-in-out 0.4s;
+  text-align: center;
+}
+.chefs .member .social a {
+  transition: color 0.3s;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+}
+.chefs .member .social a:hover {
+  color: #cda45e;
+}
+.chefs .member .social i {
+  font-size: 18px;
+  margin: 0 2px;
+}
+.chefs .member:hover .member-info {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 20%, rgba(0, 212, 255, 0) 100%);
+  opacity: 1;
+  transition: 0.4s;
+}
+.chefs .member:hover .member-info-content {
+  bottom: 60px;
+  transition: bottom 0.4s;
+}
+.chefs .member:hover .social {
+  bottom: 0;
+  transition: bottom ease-in-out 0.4s;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #BCB0B0;
+  overflow: hidden;
+  width: 122%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.asd:hover .overlay {
+   height: 30%;
+
+}
+	
+.asd {
+  position: relative;
+  display: flex;
+  width: 80%;
+  max-width: 300px;
+}
+.image {
+
+ width: 345px;
+  height: 345px;
+  margin-left: 20px;
+border-radius:30px 30px 30px 30px;
+}
+	 
+	  .panel-body{
+		  color: #FFFFFF;
+		  font-family: "annie-use-your-telescope";
+		  background-color: #333;
+		  font-size: 20px;
+			
+			  }
+	  #de{
+		  border-radius:300px 300px 300px 300px;
+		      opacity: 0.8;
+	  }
+	  #de3{
+		  border-radius:300px 300px 300px 300px;
+		      opacity: 0.8;
+	  }
+	  #de2{
+		  border-radius:300px 300px 300px 300px;
+		      opacity: 0.8;
+	  }
+	  .back{
+		  width: 80%;
+		  height: 80%;
+		  background-color: #333;
+		  margin-left: 100px;
+		  margin-top: 100px;
+		  margin-bottom: 100px;
+		  border-radius:00px 300px 300px 3000px;
+		  z-index: 9;
+		  font-family: astloch;
+		  font-size: 20px;
+		
+	  }
+	  
+	  .cafe{
+		  margin-left: 850px;
+ 		   margin-top: -255px;
+ 		   width: 60vh;
+  		  height: 60vh;
+		  clear: both;
+		  
+	  }
+	  .c{margin-left: 320px;
+	  padding-top:20px;}
+	  .a{margin-left: 215px;
+	     }
+	  .b{
+		       width: 100%;
+   			   height: 420px;
+		       background-color: #333;
+		  
+	  }
+	  #r{
+		     width: 400PX;
+   			 height: 40%;
+		      MARGIN-LEFT: 575PX;
+		  font-size: 20PX;
+		  font-family: "alex-brush";
+	  }
+	   #r2{
+		     width: 400PX;
+   			 height: 40%;
+		  MARGIN-TOP: -175PX;
+  		  MARGIN-LEFT: 148PX;
+		  font-size: 20PX;
+		  font-family: "alex-brush";
+	  }
+	  
+	  .j1{
+		  width: 150px;
+		  height: 150px;
+		  border-radius:300px 300px 300px 300px;
+		  margin-top: 55PX;
+		   MARGIN-LEFT: 900PX;
+	  }
+	  .j{
+		  width: 150px;
+		  height: 150px;
+		  border-radius:300px 300px 300px 300px;
+		  margin-top: -680PX;
+		  
+		   MARGIN-LEFT: 165PX;
+	  }
+	  .q{
+		  width: 400px;
+		  height: 300px;
+		  margin-left: 75px;
+		  margin-top: 10px;
+		  margin-bottom: 10px;
+		  border-radius:30px 30px 30px 30px;
+		  opacity: 0.5;
+		  transition: transform .4s
+	  }
+	  .q:hover{opacity: 1.0;
+	  transform: scale(1.1);
+		  z-index: 7;
+		
+	  }  
+	  
+	  
+	</style>
+</head>
+<body>
+
+  <!-- Wrapper for slides -->
+  <div id="contain" class="carousel-inner" role="listbox">
+	  <h1 id="wel">Welcome to iCafe</h1>
+    <div class="w3-content w3-section" ;>
+  <img class="mySlides" src="image/002.jpg"  alt="" style="width:100%">
+  <img class="mySlides" src="image/12.jpg" alt=""  style="width:100%">
+  <img class="mySlides" src="image/11.jpg" alt=""  style="width:100%">
+		
+</div>
+  </div>
+	
+	<!--nav-->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Home</a>
+    </div>
+    <div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="#section1">about me</a></li>
+          <li><a href="#section2">Caffe</a></li>
+          <li><a href="#section3">Dessert</a></li>
+    		  <li><a href="#section5">Cefs</a></li>
+			<li><a href="#section6">suggest</a></li>
+			<li><a href="#section8">Gallery</a></li>
+			<li><a href="#container">contact us</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+<!--ABOUT-->
+<div id="section1" class="container">
+	<div clss="ds">
+ <section class="row">
+	<article class="col-xs-12 col-sm-7">
+	 	<h2 id="h2">About icofe</h2>
+		<p id="about" class="text-justify text">The year was 1997. The place, a little town in southern Utah called St. George. A lovely couple named Steve and Patricia Stanley started a restaurant called Cafe Rio Mexican Grill. Cafe Rio served authentic dishes derived from inspired recipes and traditional cooking of Northern Mexico&rsquo;s Rio Grande region, Southern Texas, and New Mexico. Central to every bite was the belief that every ingredient must be fresh and made fresh to order. And you know what? People loved it. They couldn&rsquo;t get enough of it. So much so, that one restaurant became six. In 2004, these six little restaurants caught the attention of a fine gentleman named Bob Nilsen. He purchased Cafe Rio from the Stanleys with the idea of spreading the love of making this fresh Mexican food to everyone in and around Utah and beyond.</p>
+	 </article>	
+	<article class="col-xs-12 col-sm-5">
+	 <img src="image/01.jpg" alt="pic" class="img-responsive">
+	 </article>
+</section>
+</div></div>
+<div id="section2" class="container-fluid">
+<!--	<article class="col-xs-12 col-sm-7">-->
+<div class="back">
+	<h3 class="c">CAFFEE</h3>
+	<p class="a">AMERICANO.............................................4$</p>
+	<p class="a">CAPPUOCCINO.........................................4$</p>
+	<p class="a">MACHIOTO................................................4$</p>
+	<p class="a">ESPERSOO.................................................4$</p>
+	<p class="a">MOCHA......................................................4$</p>
+	<img src="image/232.webp" alt="1" class="cafe">
+	</div>
+<!--	</article>-->
+  
+</div>
+<div id="section3" class="container-fluid">
+  <section class="row">
+	<article class="col-xs-12 col-sm-4">
+	 	<div class="panel panel-info ">
+			<div class="panel-body">
+				<img src="image/dessert/1.jpg" alt="pic" id="de3" class="img-responsive">
+				<p class="text1 text-justify">Banna Cake...........................................................7$ </p>
+				
+			</div>
+		</div>
+	</article>	
+	<article class="col-xs-12 col-sm-4">
+	 	<div class="panel panel-info">
+			
+			<div class="panel-body">
+				<img src="image/dessert/2.jpg" alt="pic" id="de2" class="img-responsive">
+				<p class="text1 text-justify">Chocolate Dessert.....................................................3$</p>
+				
+			</div>
+			
+		</div>
+	</article>	
+	 <article class="col-xs-12 col-sm-4">
+	 	<div class="panel panel-info">
+			
+			<div class="panel-body">
+				<img src="image/dessert/3.jpg" alt="pic" id="de" class="img-responsive">
+				<p class="text1 text-justify">Pruit Pancake...........................................................3$</p>
+				
+			</div>
+		</div>
+	</article>	
+</section>
+</div>
+
+		
+
+<div id="section5" class="container-fluid">
+  <div class="asd">
+
+  <img src="image/chefs/chefs-1.jpg" alt="Avatar" class="image">
+	    <img src="image/chefs/chefs-2.jpg" alt="Avatar" class="image">
+	  <img src="image/chefs/chefs-3.jpg" alt="Avatar" class="image">
+	  	  <img src="image/chefs/chefs-4.jpg" alt="Avatar" class="image">
+	  <div class="overlay">
+	    <div class="text3" >My Name is Karim</div> 
+ 	    <div class="text3">My Name is Mahien</div>
+		<div class="text3">My Name is Ali</div>
+ 		 <div class="text3">My Name is Shadmehr</div></div>
+
+
+</div>
+</div>
+	
+<div id="section6" class="container-fluid">
+<!--	<article class="col-xs-12 col-sm-4">-->
+  <div class="b">
+	  <p id="r">Step 1: Get number by user.
+Step 2: Get the modulus/remainder of the number.
+Step 3: sum the remainder of the number.
+Step 4: Divide the number by 10.
+		  Step 5: Repeat the step 2 while number is greater than 0.</p>
+	  <hr>
+	  <img src="image/icon.jpg" alt="" class="j1">
+	  <p id="r2">Step 1: Get number by user.
+Step 2: Get the modulus/remainder of the number.
+Step 3: sum the remainder of the number.
+Step 4: Divide the number by 10.
+Step 5: Repeat the step 2 while number is greater than 0.</p>
+	  <img src="image/icon.jpg" alt="" class="j">
+	</div>
+	
+<!--	</article>-->
+</div>
+  <div id="section8" class="container-fluid">
+	  <article class="aa">
+	  <img src="image/gallery/01.jpg" alt="" class="q">
+		  <img src="image/gallery/gallery-3.jpg" alt="" class="q">
+		  <img src="image/gallery/gallery-2.jpg" alt="" class="q">
+		  <img src="image/gallery/gallery-5.jpg" alt="" class="q">
+		  <img src="image/gallery/gallery-8.jpg" alt="" class="q">
+		  <img src="image/gallery/gallery-6.jpg" alt="" class="q">
+	  </article>
+	  
+	  </div>
+
+	<!--CONECT US-->
+<div id="container" class="col-xs-12 col-sm-5">
+  <form action="/action_page.php">
+    <div class="row">
+      <h2 style="text-align:center">Login with Social Media or Manually</h2>
+      <div class="vl">
+        <span class="vl-innertext">or</span>
+      </div>
+
+      <div class="col">
+        <a href="#" class="fb btn">
+          <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+         </a>
+        <a href="#" class="twitter btn">
+          <i class="fa fa-twitter fa-fw"></i> Login with Twitter
+        </a>
+        <a href="#" class="google btn"><i class="fa fa-google fa-fw">
+          </i> Login with Google+
+        </a>
+      </div>
+
+      <div class="col ">
+        <div class="hide-md-lg">
+          <p>Or sign in manually:</p>
+        </div>
+
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="submit" value="Login">
+		  
+		  
+      </div>
+      
+    </div>
+  </form>
+
+</div>
+	<div class="bottom-container">
+  <img src="image/co.png" alt="pic3" id="imco" load="lazy">
+	<img src="image/co3.png" alt="pic3" id="imco3" load="lazy">
+   <img src="image/co2.png" alt="pic3" id="imco2" load="lazy">
+</div>
+
+
+<script>
+$(document).ready(function(){
+  // Add scrollspy to <body>
+  $('body').scrollspy({target: ".navbar", offset: 50});   
+
+  // Add smooth scrolling on all links inside the navbar
+  $("#myNavbar a").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    }  // End if
+  });
+});
+	
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000); // Change image every 2 seconds
+}
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+	console.log(sticky);
+//  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky");
+	//  } else {
+//    header.classList.remove("sticky");
+//  }
+}
+
+	
+</script>
+
+</body>
+</html>
